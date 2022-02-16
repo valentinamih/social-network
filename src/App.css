@@ -1,0 +1,28 @@
+:root {
+  --main-light-color: #F5F3F7;
+  --hover-light-color: #E5E0EB;
+  --light-purple-color: #9D3FE7;
+  --dark-purple-color: #602093;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
+.app-wrapper {
+  grid-template-areas: 'h h' 'n c';
+  display: grid;
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 10fr;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.app-wrapper-content {
+  grid-area: c;
+  background-color: var(--main-light-color);
+  }
+
+
+
+

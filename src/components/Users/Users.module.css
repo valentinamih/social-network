@@ -1,0 +1,10 @@
+.avatar {
+    height: 40px;
+    border-radius: 50%;
+    width: 40px;
+}
+
+.selectedPage {
+    font-weight: bold;
+    color: #B72E79;
+}

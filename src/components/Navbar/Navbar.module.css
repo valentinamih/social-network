@@ -1,0 +1,21 @@
+:root {
+    --main-light-color: #F5F3F7;
+    --hover-light-color: #c9c7cc;
+    --light-purple-color: #9D3FE7;
+    --dark-purple-color: #602093;
+}
+
+.nav {
+    grid-area: n;
+    background-color: var(--dark-purple-color);
+    padding: 10px;
+  }
+
+  .item a{
+      color: var(--main-light-color);
+      text-decoration: none;
+  }
+
+  .item a.active{
+      color: var(--hover-light-color);
+  }

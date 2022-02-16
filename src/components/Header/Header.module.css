@@ -1,0 +1,42 @@
+:root {
+    --main-light-color: #F5F3F7;
+    --hover-light-color: #E5E0EB;
+    --light-purple-color: #9D3FE7;
+    --dark-purple-color: #602093;
+}
+
+.header {
+    grid-area: h;
+    display: grid;
+    grid-template-columns:1fr 5fr 1fr;
+    background-color: var(--light-purple-color);
+    color: var(--main-light-color);
+    align-items: center;
+}
+
+.header img {
+    width: 80px
+}
+
+.loginSpan {
+    margin-right: 20px;
+    display: grid;
+    justify-items: center;
+    border: 1px solid var(--dark-purple-color);
+    border-radius: 5px;
+    background: var(--main-light-color);
+    color: var(--dark-purple-color);
+}
+.loginSpan:hover {
+    background: var(--hover-light-color);
+    transition: 0.5s;
+}
+
+.logoImg {
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.mainHeading {
+    font-size: 200%;
+}

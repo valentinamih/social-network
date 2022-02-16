@@ -1,0 +1,33 @@
+.dialogs {
+    display: grid;
+    grid-template-columns: 40% 70%;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.dialogsItems  a{
+
+    padding-bottom: 20px;
+    color: peachpuff;
+    text-decoration: none;
+    text-align: center;
+}
+
+.dialogsItems .active {
+    color: hotpink;
+    text-decoration: none;
+}
+
+.messages {
+    color: peachpuff;
+
+}
+
+
+
+

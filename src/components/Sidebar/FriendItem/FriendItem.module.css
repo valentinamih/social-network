@@ -1,0 +1,19 @@
+.friendItem {
+    float: left;
+    padding: 7px;
+}
+
+.avatar {
+    height: 40px;
+    border-radius: 50%;
+    width: 40px;
+}
+.active {
+    text-decoration: none;
+    color: #1C003D;
+}
+
+a {
+    text-decoration: none;
+    color: #8A2700;
+}
