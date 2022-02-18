@@ -1,4 +1,4 @@
-https://valushkalove.github.io/social-network/
+https://valentinamih.github.io/social-network/
 
 # Getting Started with Create React App
 
