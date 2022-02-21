@@ -21,10 +21,6 @@ export const usersAPI = {
         return instance.delete(`follow/${id}`)
             .then(response => response.data)
     },
-    getProfile (userId) {
-        console.warn('Obsoleted method. Use object profileAPI')
-       return profileAPI.getProfile(userId)
-    }
 }
 
 export const profileAPI = {
@@ -39,7 +35,22 @@ export const profileAPI = {
     updateStatus (status) {
         return instance.put('profile/status' , {status: status})
             .then(response => response.data)
+    },
+    updatePhoto (photoFile) {
+        const formData = new FormData();
+        formData.append('image', photoFile)
+        return instance.put('profile/photo' , formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        })
+            .then(response => response.data)
+    },
+    saveProfile (profile) {
+        return instance.put('profile' , profile)
+            .then(response => response.data)
     }
+
 }
 export const authAPI = {
     me () { return instance.get(`auth/me`)

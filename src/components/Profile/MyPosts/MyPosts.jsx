@@ -5,20 +5,17 @@ import {maxLengthCreator, required} from "../../../utilits/validators/validators
 import {Textarea} from "../../common/FormControls/FormControls";
 
 const MyPosts = (props) => {
-console.log('render')
     let postsElements = [
         props.posts.map( post => <Post message={post.message}
                                        key={post.id}
                                        likesCount={post.likesCount} />)
     ]
-
     let addPost = (values) => {
        props.addPost(values.newPostText)
     }
-
     return (
         <div>
-            My Posts
+            <b>My Posts</b>
             <AddPostReduxForm onSubmit={addPost}/>
             {postsElements}
         </div>
@@ -33,7 +30,6 @@ const AddPostForm = (props) => {
         </div>
     </form>
 }
-
 const AddPostReduxForm = reduxForm({
     form: 'addPost'
 })(AddPostForm)
