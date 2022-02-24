@@ -1,7 +1,50 @@
+:root {
+    --main-light-color: #F5F3F7;
+    --hover-light-color: #E5E0EB;
+    --light-purple-color: #9D3FE7;
+    --dark-purple-color: #602093;
+}
+.profileInfoWrapper {
+    display: grid;
+    grid-template-areas: 'i n'
+    'd d';
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr 3fr;
+}
+.addPhotoInput {
+    position: absolute;
+    top: 0
+}
+.addPhotoImage {
+    width: 30px;
+}
+.addPhotoImage:hover {
+    opacity: 70%;
+}
+.profileImage {
+    position: relative;
+    grid-area: i;
+}
+.profileImage input {
+    display: none;
+}
+.nameAndStatus {
+    grid-area: n;
+}
+.profileData {
+    grid-area: d;
+}
 .avatar {
+    margin: 10px 0px 0px 10px;
+    border-radius: 50%;
     max-width: 150px;
 }
-
 .contact {
     color: maroon;
 }
+.userName {
+    margin-top: 10px;
+    font-size: xx-large;
+    color: var(--dark-purple-color);
+}
+

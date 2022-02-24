@@ -1,21 +1,20 @@
 import Contacts from "./Contacts";
+import style from './ProfileInfo.module.css'
+import Button from "../../common/Buttons/Button";
 
 export const ProfileData = (props) => {
-    return  <div>
+    return  <div className={style.profileDataWrapper}>
         <div>
-            {props.isOwner && <div><button onClick={props.goToEditMode}>edit</button></div>}
+            {props.isOwner && <Button onClickFunction={props.goToEditMode} text={'Edit'} />}
         </div>
         <div>
-            <b>{props.profile.fullName}</b>
-        </div>
-        <div>
-            {props.profile.aboutMe || 'didn t add about yet;('}
+            <b>About me: </b> {props.profile.aboutMe || 'didn t add about yet;('}
         </div>
         <div>
             <b>Looking for a job: </b> {props.profile.lookingForAJob ? 'Yes' : 'No'}
         </div>
         <div>
-            {props.profile.lookingForAJob && props.profile.lookingForAJobDescription}
+            <b>My professional skills: </b> {props.profile.lookingForAJob && props.profile.lookingForAJobDescription}
         </div>
         <div>
             Contacts: {Object.keys(props.profile.contacts).map((contact) => {

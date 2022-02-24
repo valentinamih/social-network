@@ -5,6 +5,8 @@ import React from 'react'
 import {Field, reduxForm} from "redux-form";
 import {maxLengthCreator, required} from "../../utilits/validators/validators";
 import {Textarea} from "../common/FormControls/FormControls";
+import Button from "../common/Buttons/Button";
+import Heading from "../common/Headings/Headings";
 
 
 const Dialogs = (props) => {
@@ -21,11 +23,11 @@ const Dialogs = (props) => {
 
         <div className={style.dialogs}>
             <div className={style.dialogsItems}>
-                Dialogs
+                <Heading heading={'Dialogs'} />
                 {dialogsElements}
             </div>
             <div className={style.messagesItems}>
-                Messages
+                <Heading heading={'Messages'} />
                 {messagesElements}
                 <AddMessageReduxForm onSubmit={addMessage} />
             </div>
@@ -34,12 +36,11 @@ const Dialogs = (props) => {
 }
 const maxLength50 = maxLengthCreator(50)
 const AddMessageForm = (props) => {
-
     return <form onSubmit={props.handleSubmit}>
         <div>
             <Field validate={[required, maxLength50]}
                 component={Textarea} name={'newMessageText'} placeholder='enter yor message'/>
-            <button>send</button>
+            <Button text={"Send message"} />
         </div>
     </form>
 }

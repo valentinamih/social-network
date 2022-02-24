@@ -1,7 +1,10 @@
+import Heading from "../common/Headings/Headings";
+import React from "react";
+
 const Settings = (props) => {
     return (
         <div>
-            Settings
+            <Heading heading={'Settings'} />
         </div>
     )
 }

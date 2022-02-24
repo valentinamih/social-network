@@ -1,0 +1,14 @@
+.editButton {
+    padding: 5px 10px;
+    text-align: center;
+    appearance: none;
+    border: 0;
+    border-radius: 5px;
+    background: var(--light-purple-color);
+    color: var(--main-light-color);
+    font-size: medium;
+}
+
+button:disabled {
+    background-color: var(--dark-purple-color) ;
+}

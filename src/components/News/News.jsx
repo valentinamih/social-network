@@ -1,7 +1,10 @@
+import Heading from "../common/Headings/Headings";
+import React from "react";
+
 const News = (props) => {
     return (
         <div>
-            News
+            <Heading heading={'News'} />
         </div>
     )
 }

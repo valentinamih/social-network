@@ -27,14 +27,15 @@ export const profileAPI = {
     getProfile (userId) {
         return instance.get(`profile/${userId}`)
             .then(response => response.data)
+
     },
     getStatus (userId) {
         return instance.get(`profile/status/${userId}`)
             .then(response => response.data)
     },
     updateStatus (status) {
-        return instance.put('profile/status' , {status: status})
-            .then(response => response.data)
+            return instance.put('profile/status' , {status: status})
+                .then(response => response.data)
     },
     updatePhoto (photoFile) {
         const formData = new FormData();
@@ -53,13 +54,13 @@ export const profileAPI = {
 
 }
 export const authAPI = {
-    me () { return instance.get(`auth/me`)
+    me () {return instance.get(`auth/me`)},
+    login (email, password, rememberMe = false, captcha = null) {
+        return instance.post('auth/login', {email, password, rememberMe,captcha})
     },
-    login (email, password, rememberMe = false) {
+    logout () {return instance.delete('auth/login')}
+}
 
-        return instance.post('auth/login', {email, password, rememberMe})
-    },
-    logout () { return instance.delete('auth/login')
-    }
-
+export const securityAPI = {
+    getCaptcha () {return instance.get('security/get-captcha-url')}
 }

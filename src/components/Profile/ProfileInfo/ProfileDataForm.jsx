@@ -2,6 +2,7 @@ import {createField, Input} from "../../common/FormControls/FormControls";
 import {reduxForm} from "redux-form";
 import style from "./ProfileInfo.module.css";
 import React from "react";
+import Button from "../../common/Buttons/Button";
 
 
 export const ProfileFormData = ({handleSubmit, profile, error}) => {
@@ -30,7 +31,7 @@ export const ProfileFormData = ({handleSubmit, profile, error}) => {
         })}
         </div>
         <div>
-                <button>Save</button>
+                <Button text={'Submit'} />
         </div>
 
     </form>

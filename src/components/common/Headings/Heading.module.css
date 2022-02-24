@@ -1,0 +1,6 @@
+.heading {
+    padding-left: 50px;
+    font-size: larger;
+    font-weight: bold;
+    color: var(--dark-purple-color);
+}

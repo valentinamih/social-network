@@ -1,3 +1,16 @@
 .paginator {
-
+    margin-left: 70px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.pageNumber {
+    display: inline-block;
+    width: 30px;
+    border: 1px solid darkgrey;
+    color: #9d3fe7;
+    font-weight: bold;
+    text-align: center;
+}
+.selectedPage {
+    color: #1c003d;
 }

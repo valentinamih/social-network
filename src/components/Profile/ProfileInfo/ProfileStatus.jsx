@@ -1,4 +1,5 @@
 import React from "react";
+import {createField} from "../../common/FormControls/FormControls";
 
 class ProfileStatus extends React.Component {
     state = {
@@ -25,7 +26,7 @@ class ProfileStatus extends React.Component {
     render() {
         return <div>
             {!this.state.editMode ? <span onDoubleClick={this.activateEditMode}>{this.props.status || '---'} </span>
-            : <input onChange={this.onStatusChange} autoFocus={true} onBlur={this.deactivateEditMode} type='text' value={this.state.status}/>}
+            :<input onChange={this.onStatusChange}  autoFocus={true} onBlur={this.deactivateEditMode} type='text' value={this.state.status}/>}
         </div>
     }
 }

@@ -11,8 +11,6 @@ let mapStateToProps = (state) => {
         messages: state.dialogsPage.messages,
     }
 }
-
-
 export default compose(connect(mapStateToProps, {
     addMessage
 }),
