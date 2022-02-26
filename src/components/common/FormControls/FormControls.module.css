@@ -1,16 +1,30 @@
-
 .formControl.error input {
-
+    border: solid var(--error-color) 1px;
 }
-
 .formControl.error textarea {
-    border: solid #8A2700 1px;
+    border: solid var(--error-color) 1px;
 }
-
 .formControl.error span {
-    color: #8A2700;
+    color: var(--error-color);
 }
-
+.formControl.error textarea {
+    border: solid var(--error-color) 1px;
+}
 .formSummaryError {
-    border: 1px solid #B72E79;
+    border: 1px solid var(--error-color);
+}
+.formControl textarea:hover {
+    background-color: var(--hover-light-color);
+}
+.formControl input:hover {
+    background-color: var(--hover-light-color);
+}
+.formControl textarea:focus {
+    outline: none;
+    border: solid var(--light-purple-color) 1px;
+
+}
+.formControl input:focus {
+    outline: none;
+    border: solid var(--light-purple-color) 1px;
 }

@@ -15,12 +15,10 @@ const Dialogs = (props) => {
                                                                   key={dialog.id} id={dialog.id}/>)
     let messagesElements = props.messages.map(message => <Message message={message.message}
                                                                   key={message.id}/>)
-
     let addMessage = (values) => {
         props.addMessage(values.newMessageText)
     }
     return (
-
         <div className={style.dialogs}>
             <div className={style.dialogsItems}>
                 <Heading heading={'Dialogs'} />

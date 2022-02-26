@@ -11,7 +11,8 @@ let initialStore = {
         {id: 2, message: "this is my first post!", likesCount: 3}
     ],
     profile: null,
-    status: ''
+    status: '',
+    photos: []
 }
 let profileReducer = (state = initialStore, action) => {
     switch (action.type) {

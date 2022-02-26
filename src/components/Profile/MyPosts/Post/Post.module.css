@@ -1,10 +1,24 @@
-.item {
-    color: #1C003D;
-}
-
-.item img {
-    
+.avatar {
+    margin: 5px 0;
     height: 50px;
     border-radius: 50%;
-    width: 40px;
+    width: 50px;
+}
+.post {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    word-wrap: break-word;
+    overflow-x: hidden;
+    max-width: 400px;
+}
+.likeButton {
+    display: grid;
+    margin: 0;
+    width: 15px;
+    justify-content: end;
+}
+.postText {
+    max-width:300px
 }

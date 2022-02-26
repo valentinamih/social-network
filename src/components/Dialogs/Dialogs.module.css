@@ -1,6 +1,6 @@
 .dialogs {
     display: grid;
-    grid-template-columns: 40% 70%;
+    grid-template-columns: 40% 60%;
 }
 
 .avatar {
@@ -11,22 +11,34 @@
 }
 
 .dialogsItems  a{
-
-    padding-bottom: 20px;
-    color: peachpuff;
+    color: var(--light-purple-color);
     text-decoration: none;
     text-align: center;
 }
 
 .dialogsItems .active {
-    color: hotpink;
+    color: var(--dark-purple-color);
     text-decoration: none;
 }
 
-.messages {
-    color: peachpuff;
-
+.dialog {
+    display: grid;
+    grid-template-columns: 50px auto;
+    justify-items: start;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    border: 1px solid var(--hover-light-color);
+    border-right: none;
 }
+.message {
+    display: grid;
+    border: 1px solid var(--hover-light-color);
+    border-right: none;
+    align-items: center;
+    height: 50px;
+}
+
 
 
 

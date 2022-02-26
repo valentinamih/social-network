@@ -1,11 +1,16 @@
-import s from "./Post.module.css"
+import style from "./Post.module.css"
+import like from '../../../../assets/images/like.png'
 
 const Post = (props) => {
     return (
-        <div className={s.item}>
-            <img src="https://get.wallhere.com/photo/1600x1200-px-action-adventure-alien-aliens-Avatar-fantasy-fi-fighting-futuristic-sci-warrior-1635355.jpg"/>
-            {props.message} <br />
-            <span>like! {props.likesCount}</span>
+        <div className={style.post}>
+            <img className={style.avatar} src={props.photo}/>
+            <div className={style.postText}>
+                {props.message}
+            </div>
+            <div >
+                <img className={style.likeButton} src={like}/>
+            </div>
         </div>
     )
 }

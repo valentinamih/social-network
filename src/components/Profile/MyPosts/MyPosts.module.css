@@ -1,1 +1,8 @@
-
+.posts {
+    margin-left: 10px;
+}
+.addPostForm {
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-items: start;
+}
