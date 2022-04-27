@@ -5,7 +5,7 @@ describe('ProfileStatus component', () => {
     test('status from props should be in state', () => {
         const component = create(<ProfileStatus status={'test status'}/>)
         const instance = component.getInstance()
-        expect(instance.state.status).toBe('test status')
+        expect(instance?.state.status).toBe('test status')
     })
     test('after rendering should be a <span> element', () => {
         const component = create(<ProfileStatus status={'test status'} />)
@@ -14,7 +14,7 @@ describe('ProfileStatus component', () => {
         expect(span).not.toBeNull()
     })
     test("after rendering shouldn't be an <input> element", () => {
-        const component = create(<ProfileStatus status={'test status'} />)
+        const component = create(<ProfileStatus  status={'test status'} />)
         const root = component.root
         expect( () => {
             let input = root.findByType('input')
